@@ -101,7 +101,7 @@
 
 
 	  		var pointcloudProjection = e.pointcloud.projection;
-	      //pointcloudProjection = "+proj=utm +zone=10 +datum=WGS84 +units=m +no_defs";
+	    	pointcloudProjection = "+proj=utm +zone=10 +datum=WGS84 +units=m +no_defs";
 	  		let mapProjection = proj4.defs("WGS84");
 
 	  		window.toMap = proj4(pointcloudProjection, mapProjection);
