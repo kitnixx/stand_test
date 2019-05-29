@@ -94,14 +94,14 @@
 	  		let material = e.pointcloud.material;
 	  		material.pointSizeType = Potree.PointSizeType.ADAPTIVE;
 
-	  		potreeViewer.scene.view.position.set(476828.47, 494219, 193);
-	  		potreeViewer.scene.view.lookAt(new THREE.Vector3(476828.47, 494219, 193));
+	  		potreeViewer.fitToScreen(0.7)(476828.47, 494219, 193);
+	  		potreeViewer.fitToScreen(0.7)(new THREE.Vector3(476828.47, 494219, 193));
 
 	  		Potree.measureTimings = true;
 
 
 	  		var pointcloudProjection = e.pointcloud.projection;
-	    	pointcloudProjection = "+proj=utm +zone=10 +datum=WGS84 +units=m +no_defs";
+	    	//pointcloudProjection = "+proj=utm +zone=10 +datum=WGS84 +units=m +no_defs";
 	  		let mapProjection = proj4.defs("WGS84");
 
 	  		window.toMap = proj4(pointcloudProjection, mapProjection);
